@@ -35,9 +35,7 @@ pipeline {
 
       }
       when {
-	expression {
-          return BRANCH == 'master';
-        }
+        branch "master"
       }
       steps {
         echo 'packaging app into a war file'
@@ -48,9 +46,7 @@ pipeline {
 
     stage('Docker build and publish') {
       when {
-        expression {
-          return BRANCH == 'master';
-        }
+        branch "master"
       }
       steps {
         script {
