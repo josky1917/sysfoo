@@ -1,0 +1,7 @@
+version: "3.8"
+
+services:
+    sysfoo:
+        image: josky1917/sysfoo:latest
+        ports:
+        - 9999:8080
